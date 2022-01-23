@@ -68,9 +68,10 @@ h1 {
 }
 
 .random--number {
-  padding: 1em;
+  padding: 0.7em;
   background: var(--secondary-color);
   color: var(--tertiary-color);
+  font-size: 1.5em;
 }
 
 @media only screen and (min-width: 767px) {
@@ -80,9 +81,10 @@ h1 {
 
   h1 {
     font-size: 2em;
+    padding-bottom: 0.3em;
   }
 
   .random--number {
-    padding: 2em;
+    padding: 1.5em;
   }
 }
