@@ -46,6 +46,14 @@ section > div > div {
   text-align: center;
 }
 
+#input--form {
+  border: 30px solid red;
+}
+
+#input--form > * {
+  display: block;
+}
+
 input {
   width: 50%;
   background-color: transparent;
@@ -55,12 +63,18 @@ input {
   border-radius: 5px;
 }
 
-button {
+button,
+input {
   padding: 15px;
   background: var(--secondary-color);
   border: none;
   border-radius: 5px;
   color: var(--tertiary-color);
+}
+
+button:hover,
+input:hover {
+  cursor: pointer;
 }
 
 h1 {
