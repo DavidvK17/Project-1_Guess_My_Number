@@ -34,6 +34,9 @@ checkUserGuess.addEventListener('click', function(e) {
       hiddenNumber[0].textContent = `${randomNum}`;
       hiddenNumber[0].classList.add('is--correct');
       document.getElementsByTagName('h1')[0].textContent = '🏆 YOU WIN! :)';
+      document.getElementsByTagName('body')[0].style.background =
+        'var(--seventh-color)';
+      document.getElementsByTagName('body')[0].classList.add('winner');
     } else if (guess > randomNum) {
       text.textContent = '📉 Too High!';
       calcDispScore();

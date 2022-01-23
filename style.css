@@ -13,6 +13,7 @@
   --fourth-color: #fff;
   --fifth-color: linear-gradient(to top right, #db0909, #e9cccc);
   --sixth-color: #000;
+  --seventh-color: linear-gradient(to top left, #a6b6d2, #0b134e);
 }
 
 body {
@@ -105,10 +106,21 @@ h1 {
   }
 }
 
+.winner {
+  transform: rotateX(360deg);
+  transform: rotateY(360deg);
+  transition-duration: 3s;
+  transition-timing-function: ease-in-out;
+}
+
 .is--correct {
   font-size: 2em;
   padding: 2em;
   transform: rotateZ(360deg);
   transition-duration: 2s;
   transition-timing-function: ease-in-out;
+}
+
+form {
+  text-align: center;
 }
