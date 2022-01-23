@@ -104,6 +104,11 @@ h1 {
   .random--number {
     padding: 1.5em;
   }
+
+  .is--correct {
+    font-size: 2em;
+    padding: 2em;
+  }
 }
 
 .winner {
@@ -115,7 +120,7 @@ h1 {
 
 .is--correct {
   font-size: 2em;
-  padding: 2em;
+  padding: 1em;
   transform: rotateZ(360deg);
   transition-duration: 2s;
   transition-timing-function: ease-in-out;
