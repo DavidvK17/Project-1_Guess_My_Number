@@ -1,13 +1,18 @@
 'use strict';
 
 // generate random num between 0 and 20 on documentload
-const randomNum = Math.trunc(Math.random() * 20 + 1);
+let randomNum = Math.trunc(Math.random() * 20 + 1);
+
 // Hidden Number
 const hiddenNumber = document.getElementsByClassName('random--number');
 
 // storing score value
 let score = 20;
 const displayScore = document.getElementById('score');
+
+// highscore
+let highScore = 0;
+let displayHighSocre = document.getElementById('highscore');
 
 // get user input
 const userGuess = document.getElementById('user--guess');
@@ -28,7 +33,7 @@ checkUserGuess.addEventListener('click', function(e) {
       text.textContent = '🏆 Correct Number!';
       hiddenNumber[0].textContent = `${randomNum}`;
       hiddenNumber[0].classList.add('is--correct');
-      document.getElementsByTagName('h1')[0].textContent = '🏆 You Win! :)';
+      document.getElementsByTagName('h1')[0].textContent = '🏆 YOU WIN! :)';
     } else if (guess > randomNum) {
       text.textContent = '📉 Too High!';
       calcDispScore();
@@ -38,8 +43,38 @@ checkUserGuess.addEventListener('click', function(e) {
     }
   }
 
+  //   game over
+  if (score === 0) {
+    document.getElementsByTagName('h1')[0].textContent = 'GAME OVER :(';
+    document.getElementsByTagName('body')[0].style.background =
+      'var(--fifth-color)';
+    document
+      .querySelectorAll('*')
+      .forEach(el => (el.style.color = 'var(--sixth-color)'));
+  }
+
+  //   update Highscore
+  if (guess === randomNum && score > highScore) {
+    highScore = score;
+    displayHighSocre.textContent = score;
+  }
+
   function calcDispScore() {
     score--;
     displayScore.textContent = `${score}`;
   }
+});
+
+// start new game
+const newGame = document.getElementById('again');
+
+newGame.addEventListener('click', function(e) {
+  score = 20;
+  displayScore.textContent = 20;
+  document.getElementsByTagName('h1')[0].textContent = 'Guess My Number!';
+  document.getElementById('text').textContent = 'Start guessing...';
+  randomNum = Math.trunc(Math.random() * 20 + 1);
+  console.log(randomNum);
+  hiddenNumber[0].textContent = `?`;
+  hiddenNumber[0].classList.remove('is--correct');
 });

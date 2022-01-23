@@ -11,6 +11,8 @@
   --secondary-color: linear-gradient(to top right, #03d9ff, #ffcb03);
   --tertiary-color: #000;
   --fourth-color: #fff;
+  --fifth-color: linear-gradient(to top right, #db0909, #e9cccc);
+  --sixth-color: #000;
 }
 
 body {
