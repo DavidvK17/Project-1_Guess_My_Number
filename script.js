@@ -74,7 +74,6 @@ newGame.addEventListener('click', function(e) {
   document.getElementsByTagName('h1')[0].textContent = 'Guess My Number!';
   document.getElementById('text').textContent = 'Start guessing...';
   randomNum = Math.trunc(Math.random() * 20 + 1);
-  console.log(randomNum);
   hiddenNumber[0].textContent = `?`;
   hiddenNumber[0].classList.remove('is--correct');
 });
