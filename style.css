@@ -81,7 +81,7 @@ h1 {
   text-align: center;
 }
 
-.random--number {
+#random--number {
   padding: 0.7em;
   background: var(--secondary-color);
   color: var(--tertiary-color);
@@ -98,7 +98,7 @@ h1 {
     padding-bottom: 0.3em;
   }
 
-  .random--number {
+  #random--number {
     padding: 1.5em;
   }
 }
