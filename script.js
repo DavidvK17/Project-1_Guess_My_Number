@@ -2,7 +2,6 @@
 
 // generate random num between 0 and 20 on documentload
 const randomNum = Math.trunc(Math.random() * 20 + 1);
-console.log(randomNum);
 // Hidden Number
 const hiddenNumber = document.getElementsByClassName('random--number');
 
@@ -19,7 +18,6 @@ checkUserGuess.addEventListener('click', function(e) {
   e.preventDefault();
   //   comvert user input to Number
   const guess = Number(userGuess.value);
-  userGuess.blur();
   //   clear input field
   userGuess.value = '';
 
@@ -32,10 +30,10 @@ checkUserGuess.addEventListener('click', function(e) {
       hiddenNumber[0].classList.add('is--correct');
       document.getElementsByTagName('h1')[0].textContent = '🏆 You Win! :)';
     } else if (guess > randomNum) {
-      text.textContent = 'Too High!';
+      text.textContent = '📉 Too High!';
       calcDispScore();
     } else if (guess < randomNum) {
-      text.textContent = 'Too Low!';
+      text.textContent = '📈 Too Low!';
       calcDispScore();
     }
   }
