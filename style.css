@@ -81,7 +81,7 @@ h1 {
   text-align: center;
 }
 
-#random--number {
+.random--number {
   padding: 0.7em;
   background: var(--secondary-color);
   color: var(--tertiary-color);
@@ -98,7 +98,15 @@ h1 {
     padding-bottom: 0.3em;
   }
 
-  #random--number {
+  .random--number {
     padding: 1.5em;
   }
+}
+
+.is--correct {
+  font-size: 2em;
+  padding: 2em;
+  transform: rotateZ(360deg);
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
 }
