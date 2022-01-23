@@ -7,7 +7,7 @@ let randomNum = Math.trunc(Math.random() * 20 + 1);
 const hiddenNumber = document.getElementsByClassName('random--number');
 
 // storing score value
-let score = 20;
+let score = 2;
 const displayScore = document.getElementById('score');
 
 // highscore
@@ -54,6 +54,7 @@ checkUserGuess.addEventListener('click', function(e) {
     document
       .querySelectorAll('*')
       .forEach(el => (el.style.color = 'var(--sixth-color)'));
+    hiddenNumber[0].textContent = `${randomNum}`;
   }
 
   //   update Highscore
@@ -79,4 +80,15 @@ newGame.addEventListener('click', function(e) {
   randomNum = Math.trunc(Math.random() * 20 + 1);
   hiddenNumber[0].textContent = `?`;
   hiddenNumber[0].classList.remove('is--correct');
+  document.getElementsByTagName('body')[0].style.background =
+    'var(--primary-color)';
+  document.getElementsByTagName('body')[0].classList.remove('winner');
+  document
+    .querySelectorAll('*')
+    .forEach(el => (el.style.color = 'var(--fourth-color)'));
+  document.getElementsByTagName('button')[0].style.color = 'var(--sixth-color)';
+  document
+    .querySelectorAll('input')
+    .forEach(el => (el.style.color = 'var(--sixth-color)'));
+  hiddenNumber[0].style.color = 'var(--tertiary-color)';
 });
