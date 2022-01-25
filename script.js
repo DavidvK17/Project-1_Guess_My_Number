@@ -7,7 +7,7 @@ let randomNum = Math.trunc(Math.random() * 20 + 1);
 const hiddenNumber = document.getElementsByClassName('random--number');
 
 // storing score value
-let score = 2;
+let score = 20;
 const displayScore = document.getElementById('score');
 
 // highscore
